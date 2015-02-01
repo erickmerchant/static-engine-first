@@ -1,6 +1,4 @@
-var Promise = require('es6-promise').Promise;
+module.exports = function (pages, done) {
 
-module.exports = function (pages) {
-
-    return Promise.resolve(pages.length ? [pages[0]] : []);
+    return done(null, pages.length ? [pages[0]] : []);
 };

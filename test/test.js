@@ -5,7 +5,7 @@ describe('plugin', function(){
 
     it('it should return the first page', function(done){
 
-        first([{title: 'one'}, {title: 'two'}, {title: 'three'}]).then(function(pages){
+        first([{title: 'one'}, {title: 'two'}, {title: 'three'}], function(err, pages){
 
             assert.deepEqual(pages, [{title: 'one'}]);
 
@@ -15,7 +15,7 @@ describe('plugin', function(){
 
     it('it should return an empty array if pages is empty', function(done){
 
-        first([]).then(function(pages){
+        first([], function(err, pages){
 
             assert.deepEqual(pages, []);
 

@@ -1,6 +1,6 @@
 {
   "name": "static-engine-first",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Plugin for static-engine. Reduce the collection to just the first object.",
   "main": "index.js",
   "repository": "erickmerchant/static-engine-first",

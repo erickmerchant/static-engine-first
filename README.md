@@ -12,7 +12,7 @@ var pluginA = require('plugin-a');
 
 engine([
     pluginA,
-    first;
+    first
 ]);
 
 ```

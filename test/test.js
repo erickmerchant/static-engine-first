@@ -1,25 +1,30 @@
-var assert = require('assert');
-var first = require('../index.js');
+var assert = require('assert')
+var describe = require('mocha').describe
+var it = require('mocha').it
+var first = require('../index.js')
 
-describe('plugin', function(){
+describe('plugin', function () {
+  it('it should return the first page', function (done) {
+    first([{title: 'one'}, {title: 'two'}, {title: 'three'}], function (err, pages) {
+      if (err) {
+        throw err
+      }
 
-    it('it should return the first page', function(done){
+      assert.deepEqual(pages, [{title: 'one'}])
 
-        first([{title: 'one'}, {title: 'two'}, {title: 'three'}], function(err, pages){
+      done()
+    })
+  })
 
-            assert.deepEqual(pages, [{title: 'one'}]);
+  it('it should return an empty array if pages is empty', function (done) {
+    first([], function (err, pages) {
+      if (err) {
+        throw err
+      }
 
-            done();
-        });
-    });
+      assert.deepEqual(pages, [])
 
-    it('it should return an empty array if pages is empty', function(done){
-
-        first([], function(err, pages){
-
-            assert.deepEqual(pages, []);
-
-            done();
-        });
-    });
-});
+      done()
+    })
+  })
+})

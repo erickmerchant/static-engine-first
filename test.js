@@ -1,7 +1,7 @@
 var assert = require('assert')
 var describe = require('mocha').describe
 var it = require('mocha').it
-var first = require('../index.js')
+var first = require('./index.js')
 
 describe('plugin', function () {
   it('it should return the first page', function (done) {

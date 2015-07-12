@@ -5,14 +5,12 @@
 This is a plugin for [static-engine](https://github.com/erickmerchant/static-engine). It simply reduces the collection to just the first object.
 
 ```javascript
-
-var engine = require('static-engine');
-var first = require('static-engine-first');
-var pluginA = require('plugin-a');
+var engine = require('static-engine')
+var first = require('static-engine-first')
+var pluginA = require('plugin-a')
 
 engine([
-    pluginA,
-    first
-]);
-
+  pluginA,
+  first
+])
 ```
